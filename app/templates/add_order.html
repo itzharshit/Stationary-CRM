@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}New Order{% endblock %}
+{% block content %}
+<h2>Place New Order</h2>
+<form method="POST" action="{{ url_for('new_order') }}">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.customer.label }}<br>
+        {{ form.customer() }}<br>
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}
