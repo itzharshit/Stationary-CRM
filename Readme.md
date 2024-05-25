@@ -1,0 +1,1 @@
+Stationary crm in flask
