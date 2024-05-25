@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Edit Customer{% endblock %}
+{% block content %}
+<h2>Edit Customer</h2>
+<form method="POST" action="{{ url_for('edit_customer', customer_id=customer.id) }}">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.name.label }}<br>
+        {{ form.name(size=32) }}<br>
+    </div>
+    <div>
+        {{ form.email.label }}<br>
+        {{ form.email(size=32) }}<br>
+    </div>
+    <div>
+        {{ form.phone.label }}<br>
+        {{ form.phone(size=32) }}<br>
+    </div>
+    <div>
+        {{ form.address.label }}<br>
+        {{ form.address(cols=32, rows=4) }}<br>
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}
